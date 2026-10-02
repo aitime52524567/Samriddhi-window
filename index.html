@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>昇丽迪门窗 · 制作安装管理系统</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark">昇</div>
+        <div class="logo-text">
+          <div class="logo-name">昇丽迪门窗</div>
+          <div class="logo-sub">制作 · 安装 · 管理</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav"></nav>
+
+      <div class="sidebar-footer">
+        <button class="btn btn-ghost btn-block" id="btn-backup" title="备份/恢复数据">
+          <span class="ico">💾</span> 数据备份
+        </button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="page-title" id="page-title">工作台</div>
+        <div class="topbar-actions">
+          <input type="search" id="global-search" class="search-box" placeholder="全局搜索：客户 / 订单 / 电话…">
+        </div>
+      </header>
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+  <script src="js/modules/customers.js"></script>
+  <script src="js/modules/projects.js"></script>
+  <script src="js/modules/measurements.js"></script>
+  <script src="js/modules/orders.js"></script>
+  <script src="js/modules/productions.js"></script>
+  <script src="js/modules/installations.js"></script>
+  <script src="js/modules/finance.js"></script>
+  <script src="js/modules/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
