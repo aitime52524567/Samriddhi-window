@@ -164,4 +164,19 @@
   /* ---------- 启动 ---------- */
   buildNav();
   route();
+
+  // 云端同步：先显示本地缓存，再异步拉取云端共享数据
+  (async function sync() {
+    await App.DB.initCloud();
+    await App.DB.pullAll();
+    if (current) route();
+  })();
+
+  // 定时从云端拉取最新数据（多人共享同步，15 秒一次）
+  setInterval(async function () {
+    await App.DB.pullAll();
+    if (current && !document.querySelector('#modal-root .modal-mask')) {
+      route();
+    }
+  }, 15000);
 })();
